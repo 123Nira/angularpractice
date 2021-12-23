@@ -10,10 +10,10 @@ import { EmployeeModel } from './employee-dashboard model';
 })
 export class EmployeeDashboardComponent implements OnInit {
   formValue !: FormGroup
-  employeeModelObj:EmployeeModel=new EmployeeModel()
-  employeeData:any;
+  employeeModelObj: EmployeeModel = new EmployeeModel()
+  employeeData: any;
 
-  constructor(private formbuider: FormBuilder,private api: ApiService) { }
+  constructor(private formbuider: FormBuilder, private api: ApiService) { }
 
   ngOnInit(): void {
     this.formValue = this.formbuider.group({
@@ -26,26 +26,26 @@ export class EmployeeDashboardComponent implements OnInit {
     this.getAllEmployeeData()
 
   }
-  postEmployeeDetails(){
-    this.employeeModelObj.name=this.formValue.value.name;
-    this.employeeModelObj.gender=this.formValue.value.gender;
-    this.employeeModelObj.email=this.formValue.value.email;
-    this.employeeModelObj.mobile=this.formValue.value.mobile;
-    this.employeeModelObj.salary=this.formValue.value.salary;
-    this.api.postEmployee(this.employeeModelObj).subscribe(res=>{
+  postEmployeeDetails() {
+    this.employeeModelObj.name = this.formValue.value.name;
+    this.employeeModelObj.gender = this.formValue.value.gender;
+    this.employeeModelObj.email = this.formValue.value.email;
+    this.employeeModelObj.mobile = this.formValue.value.mobile;
+    this.employeeModelObj.salary = this.formValue.value.salary;
+    this.api.postEmployee(this.employeeModelObj).subscribe(res => {
       console.log(res);
       alert("Employee added Successfully")
-      let ref=document.getElementById('cancel')
+      let ref = document.getElementById('cancel')
       ref?.click()
       this.formValue.reset()
     },
-    err=>{
-      alert("Something went wrong")
-    })
+      err => {
+        alert("Something went wrong")
+      })
   }
-  getAllEmployeeData(){
-    this.api. getEmployee().subscribe(res=>{
-      this.employeeData=res;
+  getAllEmployeeData() {
+    this.api.getEmployee().subscribe(res => {
+      this.employeeData = res;
     })
   }
 }

@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { CustompipePipe } from './custompipe.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeDashboardComponent,
-    CustompipePipe
+    CustompipePipe,
+
   ],
   imports: [
     BrowserModule,
