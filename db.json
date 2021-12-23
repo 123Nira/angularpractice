@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "name": "Raju",
+      "gender": "Male",
+      "email": "raj34@gmail.com",
+      "mobile": "9834360233",
+      "salary": "40000"
+    },
+    {
+      "id": 4,
+      "name": "Soni",
+      "gender": "Female",
+      "email": "soni56@gmail.com",
+      "mobile": "6204957834",
+      "salary": "30000"
+    },
+    {
+      "id": 5,
+      "name": "Madhu",
+      "gender": "Female",
+      "email": "madhu12@gmail.com",
+      "mobile": "8740654652",
+      "salary": "60000"
+    }
+  ]
+}
