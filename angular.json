@@ -35,6 +35,22 @@
             "scripts": []
           },
           "configurations": {
+            "developer": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.developer.ts"
+                }
+              ]
+            },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
+            },
             "production": {
               "budgets": [
                 {
@@ -70,11 +86,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "developer": {
+              "browserTarget": "angularCrud:build:developer"
+            },
+            "qa": {
+              "browserTarget": "angularCrud:build:qa"
+            },
             "production": {
               "browserTarget": "angularCrud:build:production"
-            },
-            "development": {
-              "browserTarget": "angularCrud:build:development"
             }
           },
           "defaultConfiguration": "development"

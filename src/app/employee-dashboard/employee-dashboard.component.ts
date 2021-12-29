@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { environment } from 'src/environments/environment.prod';
+
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard model';
+
 
 @Component({
   selector: 'app-employee-dashboard',
@@ -10,6 +13,8 @@ import { EmployeeModel } from './employee-dashboard model';
 })
 
 export class EmployeeDashboardComponent implements OnInit {
+
+  username=environment.username
   formValue !: FormGroup
   showAdd!: boolean;
   showUpdate!: boolean;
