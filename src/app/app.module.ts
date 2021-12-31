@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { CustompipePipe } from './custompipe.pipe';
+import { CustomStyleDirective } from './directive/custom-style.directive';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CustompipePipe } from './custompipe.pipe';
     AppComponent,
     EmployeeDashboardComponent,
     CustompipePipe,
+    CustomStyleDirective,
 
   ],
   imports: [
